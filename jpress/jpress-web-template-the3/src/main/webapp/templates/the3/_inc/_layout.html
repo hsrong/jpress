@@ -40,7 +40,7 @@
 				      	 <#else>
 				      	 <li><a href="${CPATH}/"">首页</a></li>
 				      	</#if>
-				      	<@menus>
+				      	<@jp.menus>
 				        	<#list menus as menu>
 				        		<#if menu.flag ??>
 				        			<li class="active"><a href="${menu.text!}">${menu.title}</a></li>
@@ -48,7 +48,7 @@
 				        			<li><a href="${menu.text!}">${menu.title}</a></li>
 				        		</#if>
 				        	</#list>
-				        </@menus>
+				        </@jp.menus>
         
                     </ul>
                     <ul class="nav navbar-nav jp-navbar-nav display-none-1200 pull-right">

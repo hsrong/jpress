@@ -60,6 +60,12 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>io.jpress</groupId>
+			<artifactId>jpress-web-template-adworld</artifactId>
+			<version>1.0</version>
+			<type>war</type>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -114,6 +120,10 @@
 						<overlay>
 							<groupId>io.jpress</groupId>
 							<artifactId>jpress-web-template-the3</artifactId>
+						</overlay>
+						<overlay>
+							<groupId>io.jpress</groupId>
+							<artifactId>jpress-web-template-adworld</artifactId>
 						</overlay>
 					</overlays>
 				</configuration>

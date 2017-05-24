@@ -129,7 +129,7 @@ public abstract class JpressConfig extends JFinalConfig {
 		File pathFile = new File(ehcacheDiskStorePath, ".ehcache");
 
 		Configuration cfg = ConfigurationFactory.parseConfiguration();
-		cfg.addDiskStore(new DiskStoreConfiguration().path(pathFile.getAbsolutePath()));
+//		cfg.addDiskStore(new DiskStoreConfiguration().path(pathFile.getAbsolutePath()));
 		return new EhCachePlugin(cfg);
 	}
 

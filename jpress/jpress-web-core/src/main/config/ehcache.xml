@@ -5,9 +5,7 @@
          monitoring="autodetect"
          dynamicConfig="true">
          
-         <!-- 
     <diskStore path="java.io.tmpdir"/>
-     	-->
 
     <cache name="jpress"
            maxEntriesLocalHeap="500"

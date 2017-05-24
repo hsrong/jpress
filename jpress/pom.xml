@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>io.jpress</groupId>
@@ -25,11 +24,12 @@
 		<module>jpress-web-admin</module>
 		<module>jpress-web-front</module>
 		<module>jpress-cache</module>
-	</modules>
+    <module>jpress-web-template-adworld</module>
+  </modules>
 
 
 	<properties>
-		<jdk.version>1.7</jdk.version>
+		<jdk.version>1.8</jdk.version>
 		<servlet.api.version>3.0.1</servlet.api.version>
 		<junit.version>4.11</junit.version>
 		<mysql.version>5.1.21</mysql.version>
