@@ -1,4 +1,9 @@
 /**************************page start*************************/
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
 body{
     margin:0;
     padding:0;
@@ -6,7 +11,7 @@ body{
 }
 
 html,html .body-bacground{
-    background-color: #f9f9f9;
+    background-color: rgba(255,255,255,0.9);
 }
 
 img{
@@ -835,13 +840,40 @@ ul,li{
 .x-info-padding p{
 	padding-right:1rem;
 }
-.x-white-box{
+.x-white-box {
 	background:#fff;
 	margin-bottom:1rem;
 	margin-top:1rem;
 	padding:1rem;
 	border-radius:4px;
 	border:1px solid #ededed;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.x-white-box-noborder {
+	background:#fff;
+	margin-bottom:1rem;
+	margin-top:1rem;
+	padding:1rem;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.x-white-box-noborder-nopadding {
+	background:#fff;
+	margin-bottom:1rem;
+	margin-top:1rem;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.x-white-box-noborder-nomargin {
+	background:#fff;
+	padding:1rem;
 	box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1304,14 +1336,15 @@ a.x-a-active:hover{
     color:#999;
 }
 .x-rss-btn{
-    position: absolute;
-    right:0;
     top:1rem;
     color:#fff;
     height: 2rem;
     line-height: 2rem;
     width: 4rem;
     text-align: center;
+}
+.x-search-btn{
+    width: 4rem;
 }
 .banner-left{
     height:260px;
@@ -1431,30 +1464,69 @@ a.x-a-active:hover{
 	height:4rem;
 	line-height:4rem;
 }
-.jblog-nav-content ul{
-	float:left;
-	width:100%;
-	overflow:hidden;	
-}
-.jblog-nav-content ul li{
+.jblog-nav-content  ul li{
 	float:left;
 	text-align:center;
 	margin-right:2rem;
-	
+	width:120px; 
+	font-size:14px; 
+	color:#fff; 
+	text-align:center; 
 }
 .jblog-nav-content ul li a{
-	color:#2a2a2a;
-	display: block;
-    width: 100%;
-    height: 100%;
+    width: 140px;
     color:#333;
-    position: relative;
+    display: block;
     padding:0 0.3rem;
-    
 } 
 .jblog-nav-content ul li a:hover{
     color:#19b5fe;
+    display: block;
+    width: 120px;
 }
+.jblog-nav-content li .submenu {
+	display:none;
+	width:140px;
+	background:#19b5fe; 
+	position:absolute; 
+	z-index:1000
+}
+.jblog-nav-content li .submenu li {
+	width:140px;
+	float:none;
+	padding:0;
+	background:none;
+	height:32px;
+	line-height:32px;
+	border-bottom:1px dotted #19b5fe;
+}
+.jblog-nav-content li .submenu li.last {
+	border:none;
+}
+.jblog-nav-content li .submenu li a {
+	float:none;
+	padding:0;
+	text-align:center;
+	height:32px;
+	line-height:32px;
+	background:none;
+	font-size:12px;
+	font-family:"宋体"; 
+	color:#FFFFFF
+}
+.jblog-nav-content li .submenu li a:hover { 
+	width:140px;
+	float:none;
+	padding:0;
+	text-align:center;
+	height:32px;
+	line-height:32px;
+	background:#0b3c68;
+	font-size:12px;
+	font-family:"宋体"; 
+	color:#FFFFFF
+}
+
 .jblog-rss-content{
 	position: relative;
 	padding-top:1rem;
@@ -1559,6 +1631,9 @@ a.x-a-active:hover{
 	width: 50%;
 	float: left;
 	font-size:2.4rem;
+}
+.jblog-link-logo-image img{
+	margin-top: 3px;
 }
 .jblog-link-logo-adv{
 	width: 50%;
@@ -1699,6 +1774,10 @@ a.x-a-active:hover{
     font-weight: normal;
 }
 
+.scroll-img {}
+.scroll-img ol{position:relative;width: 120px;height: 20px;top:-30px;left:60px;}
+.scroll-img ol li{float:left;width: 10px;height: 10px;margin: 5px;background: #fff;}
+.scroll-img ol li.seleted{background: #1AA4CA;}
 
 @media all and (max-width:1120px){
     .x-pc-width{
@@ -1709,11 +1788,11 @@ a.x-a-active:hover{
         -moz-box-sizing: border-box;
     }
     .blog-body .blog-sm-left{
+        display: none;
+    }
+    .blog-body .blog-sm-right{
         width: 100%;
         float: none;
-    }
-    .blog-sm-right{
-        display: none;
     }
     .x-sm-logo{
         width: 100%;

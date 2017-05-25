@@ -1,5 +1,6 @@
 package io.jpress.model.vo;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +8,7 @@ import io.jpress.model.Content;
 
 public class NavigationMenu {
 
+	private BigInteger id;
 	private String url;
 	private String title;
 	private boolean active;
@@ -16,6 +18,7 @@ public class NavigationMenu {
 	private List<NavigationMenu> childList;
 
 	public NavigationMenu(Content content, String activeClass) {
+		this.id = content.getId();
 		this.url = content.getText();
 		this.title = content.getTitle();
 		this.icon = content.getFlag();
@@ -32,6 +35,14 @@ public class NavigationMenu {
 				addChild(new NavigationMenu(c, activeClass));
 			}
 		}
+	}
+
+	public BigInteger getId() {
+		return id;
+	}
+
+	public void setId(BigInteger id) {
+		this.id = id;
 	}
 
 	public String getUrl() {
